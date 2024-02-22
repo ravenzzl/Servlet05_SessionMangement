@@ -1,0 +1,18 @@
+session : -
+        *session is something which we can store and use in our webserver for certain amount of time
+        *like things that happen between login and log-out
+ 
+ syntax 
+      for create 
+          HttpSession session = req.getSession();//Creating session
+          
+       for setting value in session
+			session.setAttribute("name", name); // set value in session  
+	  
+	  for getting value from session
+	       HttpSession session=request.getSession();
+		   out.print("Hello "+session.getAttribute("name"));//getting value from session
+	
+	notes :-
+	     HttpSession session=request.getSession(); --> this line will create session if there is no session
+	                                               -->if there is session it will get that session  
